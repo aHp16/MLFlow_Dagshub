@@ -11,8 +11,11 @@ import matplotlib.pyplot as plt
 import os 
 
 import dagshub
-dagshub.init(repo_owner='aHp16', repo_name='MLFlow_Dagshub', mlflow=True,token=os.getenv("DAGSHUB_TOKEN"))
+# Authenticate first (if needed)
+dagshub.auth.login(token=os.getenv("DAGSHUB_TOKEN"))
 
+# Then init MLflow tracking
+dagshub.init(repo_owner='aHp16', repo_name='MLFlow_Dagshub', mlflow=True)
 # Load dataset
 wine = load_wine()
 X = wine.data
