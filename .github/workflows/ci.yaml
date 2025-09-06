@@ -20,6 +20,7 @@ jobs:
         uses: actions/setup-python@v5
         with:
           python-version: '3.10'
+          cache: 'pip'   # ✅ enables pip caching
 
       # Install dependencies
       - name: Install dependencies
@@ -27,8 +28,11 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r requirements.txt
 
-      # Run training script
+      # Run training script with DagsHub auth
       - name: Run ML experiment
+        env:
+          DAGSHUB_USERNAME: aHp16
+          DAGSHUB_TOKEN: ${{ secrets.DAGSHUB_TOKEN }}
         run: python src/file.py
 
       # Run tests
