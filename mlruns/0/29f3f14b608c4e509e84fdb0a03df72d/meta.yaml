@@ -1,0 +1,14 @@
+artifact_uri: mlflow-artifacts:/0/29f3f14b608c4e509e84fdb0a03df72d/artifacts
+end_time: 1757135429987
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 29f3f14b608c4e509e84fdb0a03df72d
+run_name: bedecked-mink-510
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1757135425446
+status: 3
+tags: []
+user_id: harini
