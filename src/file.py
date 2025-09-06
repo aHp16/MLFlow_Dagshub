@@ -8,9 +8,10 @@ import numpy as np
 import pandas as pd
 import seaborn as sns
 import matplotlib.pyplot as plt
+import os 
 
 import dagshub
-dagshub.init(repo_owner='aHp16', repo_name='MLFlow_Dagshub', mlflow=True)
+dagshub.init(repo_owner='aHp16', repo_name='MLFlow_Dagshub', mlflow=True,token=os.getenv("DAGSHUB_TOKEN"))
 
 # Load dataset
 wine = load_wine()
